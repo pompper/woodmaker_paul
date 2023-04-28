@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Inria+Sans&family=Inter&family=Jaldi&display=swap"
+        rel="stylesheet">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="assets/js/slickjs/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/slickjs/slick/slick-theme.css" />
+    <title>woodmaker</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cream: #FFFDD0;
+            --brown: #99592A;
+            --black: #333333;
+            --white: #FFFFFF;
+            --gray: #F4F4F4;
+        }
+
+
+        header {
+            background-color: var(--cream);
+            padding: 20px 0px;
+            box-shadow: 0px 3px 9px rgba(78, 75, 75, 0.5);
+        }
+
+        footer {
+            background-color: var(--cream);
+            padding: 20px 0px;
+            font-family: "Asap";
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            filter: invert();
+            height: 60px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .story::before {
+            background-image: url("assets/img/script.png");
+            background-size: 30px;
+            display: inline-block;
+            top: 10px;
+            right: 4px;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            content: "";
+        }
+
+        .features::before {
+            background-image: url("assets/img/stars.png");
+            background-size: 30px;
+            display: inline-block;
+            top: 10px;
+            right: 4px;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            content: "";
+        }
+
+        .products::before {
+            background-image: url("assets/img/dining.png");
+            background-size: 30px;
+            display: inline-block;
+            top: 10px;
+            right: 4px;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            content: "";
+        }
+
+
+        .menu a {
+            text-decoration: none;
+            font-family: "Asap";
+            text-transform: capitalize;
+            color: var(--black);
+            margin-right: 16px;
+        }
+
+        .menu {
+            margin-left: 70px;
+        }
+
+        .hero {
+            overflow: hidden;
+        }
+
+        .hero div {
+            height: 500px;
+            width: 100%;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+
+        .slick-dots {
+            bottom: 50px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 16px;
+            /* box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+            border-radius: 50%; */
+
+        }
+
+        .slick-dots li.slick-active button:before {
+            opacity: 1;
+            color: var(--brown);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .slick-dots li button:before {
+            opacity: 1;
+            color: #CAAC97;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .block {
+            padding: 60px;
+            padding-top: 70px;
+            text-align: center;
+            background: rgb(244, 244, 244);
+            background: linear-gradient(0deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            max-width: 550px;
+            margin: auto;
+            border-radius: 50px;
+            font-family: 'Inter';
+            border: 1px solid #b7b7b7;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .sm-block {
+            padding: 30px;
+            text-align: center;
+            background: rgb(244, 244, 244);
+            background: linear-gradient(0deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            max-width: 550px;
+            margin: 30px;
+            border-radius: 24px;
+            font-family: 'Inter';
+            border: 1px solid #b7b7b7;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: 33%;
+        }
+
+        .sm-block img {
+            width: 50px;
+        }
+
+        .sm-block h3 {
+            font-family: "Jaldi";
+            font-weight: bold;
+        }
+
+        .title {
+            width: 300px;
+            color: var(--cream);
+            margin: auto;
+            text-align: center;
+            background: url("assets/img/banner.png");
+            background-size: 100%;
+            height: 90px;
+            font-size: 40px;
+            font-family: "Jaldi";
+            font-weight: bold;
+            position: relative;
+            top: 50px;
+        }
+
+        .title span {
+            top: -3px;
+            position: relative;
+        }
+
+        #features {
+            margin-top: 90px;
+            background-color: var(--gray);
+            width: 100%;
+            padding-bottom: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            margin-top: 40px;
+        }
+
+        .grid-item {
+            /* width: 250px; */
+            /* border: 1px solid black; */
+            font-family: "Jaldi";
+            padding: 0px 10px;
+        }
+
+        .grid-item div:first-child {
+            height: 250px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+
+        .space {
+            justify-content: space-between;
+
+        }
+
+        .space span {
+            font-size: 1.6em;
+            font-family: "Jaldi";
+            font-weight: bold;
+        }
+
+        .space span span {
+            font-size: 0.8em;
+            font-weight: lighter;
+        }
+
+        .space b {
+            font-size: 1.5em;
+            font-family: "jaldi";
+            text-decoration: underline;
+        }
+
+        footer div div {
+            margin: 10px;
+            /* background-color: red; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="d-flex">
+                <img class="logo" src="assets/img/logo/logo-no-background.png">
+
+
+                <nav class="menu">
+                    <a href="#" class="story">story</a>
+                    <a href="#" class="features">features</a>
+                    <a href="#" class="products">products</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div style="background: url('assets/img/hero-01.png');"></div>
+        <div style="background: url('assets/img/hero-02.png');"></div>
+        <div style="background: url('assets/img/hero-03.png');"></div>
+    </section>
+    <section id="story">
+        <div class="container">
+            <div class="title">
+                <span>
+                    Story
+                </span>
+
+            </div>
+            <p class="block">
+                Wood Maker is a company that was born out of a group of friends' shared passion for woodworking. They
+                noticed a gap in the market for affordable, high-quality wooden products and decided to turn their hobby
+                into a business. They poured their hearts and souls into every piece, from cutting boards to custom
+                furniture, and their commitment to craftsmanship quickly gained them a loyal following. Today, Wood
+                Maker is a thriving company known for their exquisite wooden products and unwavering dedication to the
+                art of woodworking.
+            </p>
+        </div>
+    </section>
+    <section id="features">
+        <div class="title" style="top: -38px;">Features</div>
+        <div class="d-flex container">
+            <div class="sm-block">
+                <img src="assets/img/dollar.png">
+                <h3>Affordable</h3>
+                <p>
+                    We focused on sourcing materials in a cost-effective manner, streamlining their production
+                    processes, and maintaining a lean business model
+                </p>
+            </div>
+            <div class="sm-block">
+                <img src="assets/img/link.png">
+                <h3>Durability</h3>
+                <p>
+                    We carefully select hardwoods that are known for their durability, such as maple, cherry, and
+                    walnut, and source them from reputable suppliers.
+                </p>
+            </div>
+            <div class="sm-block">
+                <img src="assets/img/convenient.png">
+                <h3>Comfortable</h3>
+                <p>
+                    Wood Maker's products are often designed with practicality and functionality in mind. Their cutting
+                    boards feature handles that make them easy to carry and use.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="products">
+        <div class="container">
+            <div class="title">Products</div>
+
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/01-indra.jpg">
+                    </div>
+
+                    <div class="d-flex space">
+                        <b>Indra</b>
+                        <span>500<span>฿</span></span>
+                    </div>
+
+                    <p>basic wooden chair</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/02-black-walnut.jpg">
+                    </div>
+                    <div class="d-flex space">
+                        <b>Black walnut</b>
+                        <span>800<span>฿</span></span>
+                    </div>
+
+                    <p>A dark brown chair for a dining room</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/03-ciney.jpg">
+                    </div>
+                    <div class="d-flex space">
+                        <b>Ciney</b>
+                        <span>700<span>฿</span></span>
+                    </div>
+
+                    <p>A small chair for a toddler</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/04-chary.jpg">
+                    </div>
+                    <div class="d-flex space">
+                        <b>Chary</b>
+                        <span>1000<span>฿</span></span>
+                    </div>
+
+                    <p>The chair have curve backrest and it's comfortable</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/05-browny.jpg">
+                    </div>
+
+                    <div class="d-flex space">
+                        <b>Browny</b>
+                        <span>600<span>฿</span></span>
+                    </div>
+
+                    <p>A small wooden chair with a rowed backrest</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/06-brownova.jpg">
+                    </div>
+                    <div class="d-flex space">
+                        <b>Brownova</b>
+                        <span>700<span>฿</span></span>
+                    </div>
+
+                    <p>A high chair that is for working</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/07-modibrown.jpg">
+                    </div>
+                    <div class="d-flex space">
+                        <b>Modibrown</b>
+                        <span>1,100<span>฿</span></span>
+                    </div>
+
+                    <p>A good chair for using in a living room</p>
+                </div>
+                <div class="grid-item">
+                    <div>
+                        <img src="assets/img/products/08-modiblue.jpg">
+                    </div>
+                    <div class="d-flex space">
+                        <b>Modiblue</b>
+                        <span>1,300<span>฿</span></span>
+                    </div>
+
+                    <p>A good chair for using in a living room</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container d-flex">
+            <div>
+                <img class="logo" src="assets/img/logo/logo-no-background.png">
+                <p>Designed by Paul</p>
+            </div>
+            <div>
+                <h3 class="products">Product</h3>
+                <p>
+                    <br>Indra
+                    <br>Black Walnut
+                    <br>Cinet
+                    <br>Chary
+                </p>
+            </div>
+            <div>
+                <p><br><br><br> Browny <br> Brownova <br> Modibrown <br> Modiblue</p>
+            </div>
+            <div>
+                <h3 class="features"> Features</h3>
+                <p><br>Comfortable <br> Durability <br> Affordable</p>
+            </div>
+            <div>
+                <h3 class="story">Story</h3>
+                <p><br>About how we found "Wood Maker"</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/slickjs/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.hero').slick({
+                dots: true
+            });
+        });
+    </script>
+</body>
+
+</html>
